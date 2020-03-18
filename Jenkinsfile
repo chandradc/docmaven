@@ -1,9 +1,12 @@
-pipeline{
+pipeline {
+
     agent any{
+
         stages{
+            
             stage('Build')
             {
-                step{
+                steps{
                     echo "Building the project"
                     bat 'mvn clean package'
                 }
